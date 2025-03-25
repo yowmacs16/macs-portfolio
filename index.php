@@ -5,7 +5,7 @@
 	<title>MacS PortFolio</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
 	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -23,6 +23,18 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
 	<style>
+		.btn {
+			cursor: pointer !important;
+			pointer-events: auto !important;
+			position: relative;
+			z-index: 10;
+		}
+
+		.ftco-section {
+			position: relative;
+			z-index: 1;
+		}
+
 		.container {
 			overflow: auto;
 			/* Enable scrolling */
@@ -80,12 +92,13 @@
 			color: white;
 			cursor: pointer;
 		}
-		 /* Make Certification clickable */
-		 .certification {
-            color: goldenrod;
-            cursor: pointer;
-            text-decoration: underline;
-        }
+
+		/* Make Certification clickable */
+		.certification {
+			color: goldenrod;
+			cursor: pointer;
+			text-decoration: underline;
+		}
 	</style>
 
 </head>
@@ -93,26 +106,26 @@
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	<!-- Fullscreen Image Modal -->
-<div id="imageModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img id="modalImage" src="">
-</div>
+	<div id="imageModal" class="modal">
+		<span class="close" onclick="closeModal()">&times;</span>
+		<img id="modalImage" src="">
+	</div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll(".certification").forEach(item => {
-            item.addEventListener("click", function () {
-                const imgSrc = this.getAttribute("data-image");
-                document.getElementById("modalImage").src = imgSrc;
-                document.getElementById("imageModal").style.display = "flex";
-            });
-        });
-    });
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			document.querySelectorAll(".certification").forEach(item => {
+				item.addEventListener("click", function () {
+					const imgSrc = this.getAttribute("data-image");
+					document.getElementById("modalImage").src = imgSrc;
+					document.getElementById("imageModal").style.display = "flex";
+				});
+			});
+		});
 
-    function closeModal() {
-        document.getElementById("imageModal").style.display = "none";
-    }
-</script>
+		function closeModal() {
+			document.getElementById("imageModal").style.display = "none";
+		}
+	</script>
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 		<div class="container">
@@ -152,8 +165,9 @@
 							<div class="text">
 								<span class="subheading">Hello!</span>
 								<h1 class="mb-4 mt-3">I'm <span>Raymart Macas</span></h1>
-								<h2 class="mb-4">Software Engineer</h2>
-								<p><a href="#" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#projects-section"
+								<h2 class="mb-4">Web & Mobile Developer</h2>
+								<p><a href="https://www.facebook.com/raymart.macas" target="_blank"
+										class="btn btn-primary py-3 px-4">Hire me</a> <a href="#projects-section"
 										class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
 
 							</div>
@@ -241,17 +255,17 @@
 
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
-						<span class="date">2017-2019</span>
+						<span class="date">2019-2024</span>
 						<h2>Web Developer</h2>
 						<span class="position">HTML CSS, PHP, JavaScript</span>
 					</div>
 					<div class="resume-wrap ftco-animate">
-						<span class="date">2019-2024</span>
+						<span class="date">2019-2023</span>
 						<h2>Private Server Developer</h2>
 						<span class="position">Rohan Online</span>
 					</div>
 					<div class="resume-wrap ftco-animate">
-						<span class="date">2019-2022</span>
+						<span class="date">2022-2023</span>
 						<h2>Cross Platform Mobile App Development</h2>
 						<span class="position">Ionic Framework, Angular</span>
 					</div>
@@ -315,7 +329,7 @@
 				<div class="col-md-4 text-center d-flex ftco-animate">
 					<a href="#" class="services-1">
 						<span class="icon">
-							<i class="flaticon-analysis"></i>
+							<i class="fa-solid fa-chart-line"></i> <!-- Data Analysis Icon -->
 						</span>
 						<div class="desc">
 							<h3 class="mb-5">Data Analysis</h3>
@@ -325,29 +339,27 @@
 				<div class="col-md-4 text-center d-flex ftco-animate">
 					<a href="#" class="services-1">
 						<span class="icon">
-							<i class="flaticon-flasks"></i>
+							<i class="fa-solid fa-cash-register"></i> <!-- Sales System Icon -->
 						</span>
 						<div class="desc">
 							<h3 class="mb-5">Sales System Development</h3>
-
 						</div>
 					</a>
 				</div>
 				<div class="col-md-4 text-center d-flex ftco-animate">
 					<a href="#" class="services-1">
 						<span class="icon">
-							<i class="flaticon-ideas"></i>
+							<i class="fa-solid fa-laptop-code"></i> <!-- Web Dev Icon -->
 						</span>
 						<div class="desc">
 							<h3 class="mb-5">Web Development</h3>
 						</div>
 					</a>
 				</div>
-
 				<div class="col-md-4 text-center d-flex ftco-animate">
 					<a href="#" class="services-1">
 						<span class="icon">
-							<i class="flaticon-analysis"></i>
+							<i class="fa-solid fa-mobile-screen"></i> <!-- Mobile App Icon -->
 						</span>
 						<div class="desc">
 							<h3 class="mb-5">Mobile App Development</h3>
@@ -358,7 +370,7 @@
 				<div class="col-md-4 text-center d-flex ftco-animate">
 					<a href="#" class="services-1">
 						<span class="icon">
-							<i class="flaticon-flasks"></i>
+							<i class="fa-solid fa-warehouse"></i> <!-- Inventory System Icon -->
 						</span>
 						<div class="desc">
 							<h3 class="mb-5">Inventory System Development</h3>
@@ -368,7 +380,7 @@
 				<div class="col-md-4 text-center d-flex ftco-animate">
 					<a href="#" class="services-1">
 						<span class="icon">
-							<i class="flaticon-ideas"></i>
+							<i class="fa-solid fa-paint-brush"></i> <!-- Graphic Design Icon -->
 						</span>
 						<div class="desc">
 							<h3 class="mb-5">Graphic Designer</h3>
@@ -376,6 +388,7 @@
 					</a>
 				</div>
 			</div>
+
 		</div>
 	</section>
 
@@ -564,22 +577,24 @@
 		</div>
 	</section>
 
-	<section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+	<section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg);">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
 					<h2>I'm <span>Available</span></h2>
-					<p style="color:white">Seeking an entry-level
-						position in the field of
-						information technology
-						(IT) with a focus on
+					<p style="color:white">
+						Seeking an entry-level position in the field of information technology (IT) with a focus on
 						programming.
 					</p>
-					<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
+					<p class="mb-0">
+						<a href="https://www.facebook.com/raymart.macas" target="_blank"
+							class="btn btn-primary py-3 px-5">Hire me</a>
+					</p>
 				</div>
 			</div>
 		</div>
 	</section>
+
 
 	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
 		<div class="container">
@@ -626,7 +641,7 @@
 						</div>
 						<h3 class="mb-4">Facebook</h3>
 						<p><a href="https://www.facebook.com/raymart.macas" style="text-decoration: underline;">Raymart
-								Macs</a></p>
+								Macas</a></p>
 					</div>
 				</div>
 			</div>
